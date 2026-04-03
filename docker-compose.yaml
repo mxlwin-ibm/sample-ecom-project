@@ -1,0 +1,12 @@
+services:
+  backend:
+    image: ecom-backend
+    ports: 
+      - "9090:80"
+
+  frontend:
+    image: ecom-frontend
+    ports: 
+      - "80:80"
+    depends_on:
+      - backend
